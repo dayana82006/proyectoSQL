@@ -76,11 +76,7 @@ INSERT INTO EstadoCamper (nombre, descripcion) VALUES
 
 
 INSERT INTO TipoPrograma (nombre, descripcion) VALUES
-('Frontend', 'Programa enfocado en el desarrollo Frontend'),
-('Backend', 'Programa enfocado en el desarrollo Backend'),
-('Fullstack', 'Programa completo de Frontend y Backend'),
-('Data Science', 'Programa enfocado en la ciencia de datos'),
-('DevOps', 'Programa enfocado en operaciones de desarrollo y despliegue'),
+('Software', 'Programa enfocado en programacion'),
 ('Habilidades Blandas', 'Programa para fortalecer habilidades socioemocionales'),
 ('Inglés', 'Programa para mejorar habilidades en un segundo idioma');
 
@@ -321,84 +317,82 @@ INSERT INTO Acudiente (numero_identificacion, nombre, apellido1, apellido2, id_d
 ('100000050', 'Carmen', 'Castañeda', 'Zamora', 5, '3005151515', '6015151515', 'carmen.castaneda@email.com', 2);
 
 INSERT INTO Camper (numero_identificacion, nombre, apellido1, apellido2, id_direccion, telefono_contacto, id_estado, id_nivel_riesgo, id_acudiente, fecha_registro, fecha_ egreso, promedio_final) VALUES
-(1001, 'Juan', 'Pérez', 'Gómez', 1, '3001234567', 1, 2, 1, '2024-01-15', '2024-06-15', 90),
-(1002, 'María', 'Rodríguez', 'López', 2, '3102345678', 2, 1, 2, '2024-01-16', '2024-06-16', 78),
-(1003, 'Carlos', 'García', 'Martínez', 3, '3203456789', 1, 3, 3, '2024-01-17', '2024-06-17', 82),
-(1004, 'Ana', 'Fernández', 'Sánchez', 4, '3004567890', 2, 2, 4, '2024-01-18', '2024-06-18', 80),
-(1005, 'Luis', 'Hernández', 'Ramírez', 5, '3105678901', 1, 1, 5, '2024-01-19', '2024-06-19', 75),
-(1006, 'Laura', 'Díaz', 'Torres', 6, '3206789012', 2, 2, 6, '2024-01-20', '2024-06-20', 88),
-(1007, 'Pedro', 'Jiménez', 'Vargas', 7, '3007890123', 1, 3, 7, '2024-01-21', '2024-06-21', 81),
-(1008, 'Sofía', 'Morales', 'Rojas', 8, '3108901234', 2, 1, 8, '2024-01-22', '2024-06-22', 79),
-\1009, 'Javier', 'Ortiz', 'Guzmán', 9, '3209012345', 1, 2, 9, '2024-01-23', '2024-06-23', 83),
-(1
-10, 'Marta', 'Castro', 'Paredes', 10, '3000123456', 2, 3, 10, '2024-01-24', '2024-06-24', 77),
-(1011, 'Alejandro', 'Vega', 'Mendoza', 11, '3101234567', 1, 1, 11, '2024-01-25', '2024-06-25', 86),
-(1012, 'Paula', 'Ríos', 'Suárez', 12, '3202345678', 2, 2, 12, '2024-01-26', '2024-06-26', 80),
-(1013, 'Diego', 'López', 'Cardona', 13, '3003456789', 1, 3, 13, '2024-01-27', '2024-06-27', 74),
-(1014, 'Gabriela', 'Mora', 'Escobar', 14, '3104567890', 2, 1, 14, '2024-01-28', '2024-06-28', 89),
-(1015, 'Fernando', 'Navarro', 'Soto', 15, '3205678901', 1, 2, 15, '2024-01-29', '2024-06-29', 82),
-(1016, 'Valeria', 'Peña', 'Orozco', 16, '3006789012', 2, 3, 16, '2024-01-30', '2024-06-30', 78),
-(1017, 'Andrés', 'Ramírez', 'Muñoz', 17, '3107890123', 1, 1, 17, '2024-02-01', '2024-07-01', 87),
-(1018, 'Camila', 'Salazar', 'Jiménez', 18, '3208901234', 2, 2, 18, '2024-02-02', '2024-07-02', 81),
-(1019, 'Daniel', 'Gómez', 'Castaño', 19, '3009012345', 1, 3, 19, '2024-02-03', '2024-07-03', 79),
-(1020, 'Diana', 'Herrera', 'Valencia', 20, '3100123456', 2, 1, 20, '2024-02-04', '2024-07-04', 85),
-(1021, 'Esteban', 'Pérez', 'Gómez', 21, '3201234567', 1, 2, 21, '2024-02-05', '2024-07-05', 76),
-(1022, 'Natalia', 'Rodríguez', 'López', 22, '3002345678', 2, 3, 22, '2024-02-06', '2024-07-06', 80),
-(1023, 'Kevin', 'García', 'Martínez', 23, '3103456789', 1, 1, 23, '2024-02-07', '2024-07-07', 83),
-(1024, 'Isabela', 'Fernández', 'Sánchez', 24, '3204567890', 2, 2, 24, '2024-02-08', '2024-07-08', 78),
-(1025, 'Manuel', 'Hernández', 'Ramírez', 25, '3005678901', 1, 3, 25, '2024-02-09', '2024-07-09', 87);
-(1026, 'César', 'Mejía', 'Ríos', 26, '3116789012', 1, 1, 26, '2024-02-10', '2024-07-10', 88),
-(1027, 'Lucía', 'Quintero', 'Beltrán', 27, '3227890123', 2, 2, 27, '2024-02-11', '2024-07-11', 77),
-(1028, 'Emilio', 'Cortés', 'Núñez', 28, '3338901234', 1, 3, 28, '2024-02-12', '2024-07-12', 79),
-(1029, 'Carolina', 'Santos', 'Álvarez', 29, '3449012345', 2, 1, 29, '2024-02-13', '2024-07-13', 85),
-(1030, 'Ricardo', 'Mendoza', 'Fuentes', 30, '3550123456', 1, 2, 30, '2024-02-14', '2024-07-14', 82);
-(1031, 'Elena', 'Villalobos', 'Castillo', 31, '3661234567', 2, 3, 31, '2024-02-15', '2024-07-15', 78),
-(1032, 'Oscar', 'Figueroa', 'Luna', 32, '3772345678', 1, 1, 32, '2024-02-16', '2024-07-16', 85),
-(1033, 'Verónica', 'Silva', 'Rojas', 33, '3883456789', 2, 2, 33, '2024-02-17', '2024-07-17', 80),
-(1034, 'Julio', 'Martínez', 'Duarte', 34, '3994567890', 1, 3, 34, '2024-02-18', '2024-07-18', 79),
-(1035, 'Liliana', 'Suárez', 'Peñaloza', 35, '4005678901', 2, 1, 35, '2024-02-19', '2024-07-19', 84),
-(1036, 'Germán', 'Ortega', 'Pérez', 36, '4116789012', 1, 2, 36, '2024-02-20', '2024-07-20', 76),
-(1037, 'Andrea', 'Rico', 'Fernández', 37, '4227890123', 2, 3, 37, '2024-02-21', '2024-07-21', 88),
-(1038, 'Mauricio', 'Hernández', 'Guzmán', 38, '4338901234', 1, 1, 38, '2024-02-22', '2024-07-22', 81),
-(1039, 'Patricia', 'Vargas', 'Quintana', 39, '4449012345', 2, 2, 39, '2024-02-23', '2024-07-23', 79),
-(1040, 'Rodrigo', 'Méndez', 'Beltrán', 40, '4550123456', 1, 3, 40, '2024-02-24', '2024-07-24', 86),
-(1041, 'Teresa', 'Escobar', 'Castaño', 41, '4661234567', 2, 1, 41, '2024-02-25', '2024-07-25', 78),
-(1042, 'Sebastián', 'Ariza', 'Ospina', 42, '4772345678', 1, 2, 42, '2024-02-26', '2024-07-26', 83),
-(1043, 'Raúl', 'Lozano', 'Salinas', 43, '4883456789', 2, 3, 43, '2024-02-27', '2024-07-27', 80),
-(1044, 'Beatriz', 'Cardona', 'Valencia', 44, '4994567890', 1, 1, 44, '2024-02-28', '2024-07-28', 75),
-(1045, 'Héctor', 'Muñoz', 'Montenegro', 45, '5005678901', 2, 2, 45, '2024-02-29', '2024-07-29', 89),
-(1046, 'Claudia', 'Patiño', 'Castro', 46, '5116789012', 1, 3, 46, '2024-03-01', '2024-08-01', 82),
-(1047, 'Eduardo', 'Gómez', 'Salamanca', 47, '5227890123', 2, 1, 47, '2024-03-02', '2024-08-02', 78),
-(1048, 'Marcela', 'Navarro', 'Jiménez', 48, '5338901234', 1, 2, 48, '2024-03-03', '2024-08-03', 85),
-(1049, 'Joaquín', 'Peña', 'Álvarez', 49, '5449012345', 2, 3, 49, '2024-03-04', '2024-08-04', 80),
-(1050, 'Rosa', 'Maldonado', 'Ortiz', 50, '5550123456', 1, 1, 50, '2024-03-05', '2024-08-05', 83);
+(1001, 'Juan', 'Pérez', 'Gómez', 1, '3001234567', 1, 2, 1, '2025-01-15', '2025-10-15', 90),
+(1002, 'María', 'Rodríguez', 'López', 2, '3102345678', 2, 1, 2, '2025-01-16', '2025-10-16', 78),
+(1003, 'Carlos', 'García', 'Martínez', 3, '3203456789', 1, 3, 3, '2025-01-17', '2025-10-17', 82),
+(1004, 'Ana', 'Fernández', 'Sánchez', 4, '3004567890', 2, 2, 4, '2025-01-18', '2025-10-18', 80),
+(1005, 'Luis', 'Hernández', 'Ramírez', 5, '3105678901', 1, 1, 5, '2025-01-19', '2025-10-19', 75),
+(1006, 'Laura', 'Díaz', 'Torres', 6, '3206789012', 2, 2, 6, '2025-01-20', '2025-10-20', 88),
+(1007, 'Pedro', 'Jiménez', 'Vargas', 7, '3007890123', 1, 3, 7, '2025-01-21', '2025-10-21', 81),
+(1008, 'Sofía', 'Morales', 'Rojas', 8, '3108901234', 2, 1, 8, '2025-01-22', '2025-10-22', 79),
+(1009, 'Javier', 'Ortiz', 'Guzmán', 9, '3209012345', 1, 2, 9, '2025-01-23', '2025-10-23', 83),
+(110, 'Marta', 'Castro', 'Paredes', 10, '3000123456', 2, 3, 10, '2025-01-24', '2025-10-24', 77),
+(1011, 'Alejandro', 'Vega', 'Mendoza', 11, '3101234567', 1, 1, 11, '2025-01-25', '2025-10-25', 86),
+(1012, 'Paula', 'Ríos', 'Suárez', 12, '3202345678', 2, 2, 12, '2025-01-26', '2025-10-26', 80),
+(1013, 'Diego', 'López', 'Cardona', 13, '3003456789', 1, 3, 13, '2025-01-27', '2025-10-27', 74),
+(1014, 'Gabriela', 'Mora', 'Escobar', 14, '3104567890', 2, 1, 14, '2025-01-28', '2025-10-28', 89),
+(1015, 'Fernando', 'Navarro', 'Soto', 15, '3205678901', 1, 2, 15, '2025-01-29', '2025-10-29', 82),
+(1016, 'Valeria', 'Peña', 'Orozco', 16, '3010789012', 2, 3, 16, '2025-01-30', '2025-10-30', 78),
+(1017, 'Andrés', 'Ramírez', 'Muñoz', 17, '3107890123', 1, 1, 17, '2025-02-01', '2025-11-01', 87),
+(1018, 'Camila', 'Salazar', 'Jiménez', 18, '3208901234', 2, 2, 18, '2025-02-02', '2025-11-02', 81),
+(1019, 'Daniel', 'Gómez', 'Castaño', 19, '3009012345', 1, 3, 19, '2025-02-03', '2025-11-03', 79),
+(1020, 'Diana', 'Herrera', 'Valencia', 20, '3100123456', 2, 1, 20, '2025-02-04', '2025-11-04', 85),
+(1021, 'Esteban', 'Pérez', 'Gómez', 21, '3201234567', 1, 2, 21, '2025-02-05', '2025-11-05', 76),
+(1022, 'Natalia', 'Rodríguez', 'López', 22, '3002345678', 2, 3, 22, '2025-02-06', '2025-11-06', 80),
+(1023, 'Kevin', 'García', 'Martínez', 23, '3103456789', 1, 1, 23, '2025-02-07', '2025-07-07', 83),
+(1024, 'Isabela', 'Fernández', 'Sánchez', 24, '3204567890', 2, 2, 24, '2025-02-08', '2025-07-08', 78),
+(1025, 'Manuel', 'Hernández', 'Ramírez', 25, '3005678901', 1, 3, 25, '2025-02-09', '2025-07-09', 87);
+(1026, 'César', 'Mejía', 'Ríos', 26, '3116789012', 1, 1, 26, '2025-02-10', '2025-07-10', 88),
+(1027, 'Lucía', 'Quintero', 'Beltrán', 27, '3227890123', 2, 2, 27, '2025-02-11', '2025-07-11', 77),
+(1028, 'Emilio', 'Cortés', 'Núñez', 28, '3338901234', 1, 3, 28, '2025-02-12', '2025-07-12', 79),
+(1029, 'Carolina', 'Santos', 'Álvarez', 29, '3449012345', 2, 1, 29, '2025-02-13', '2025-07-13', 85),
+(1030, 'Ricardo', 'Mendoza', 'Fuentes', 30, '3550123456', 1, 2, 30, '2025-02-14', '2025-07-14', 82);
+(1031, 'Elena', 'Villalobos', 'Castillo', 31, '3661234567', 2, 3, 31, '2025-02-15', '2025-07-15', 78),
+(1032, 'Oscar', 'Figueroa', 'Luna', 32, '3772345678', 1, 1, 32, '2025-02-16', '2025-07-16', 85),
+(1033, 'Verónica', 'Silva', 'Rojas', 33, '3883456789', 2, 2, 33, '2025-02-17', '2025-07-17', 80),
+(1034, 'Julio', 'Martínez', 'Duarte', 34, '3994567890', 1, 3, 34, '2025-02-18', '2025-07-18', 79),
+(1035, 'Liliana', 'Suárez', 'Peñaloza', 35, '4005678901', 2, 1, 35, '2025-02-19', '2025-07-19', 84),
+(1036, 'Germán', 'Ortega', 'Pérez', 36, '4116789012', 1, 2, 36, '2025-02-20', '2025-07-20', 76),
+(1037, 'Andrea', 'Rico', 'Fernández', 37, '4227890123', 2, 3, 37, '2025-02-21', '2025-07-21', 88),
+(1038, 'Mauricio', 'Hernández', 'Guzmán', 38, '4338901234', 1, 1, 38, '2025-02-22', '2025-07-22', 81),
+(1039, 'Patricia', 'Vargas', 'Quintana', 39, '4449012345', 2, 2, 39, '2025-02-23', '2025-07-23', 79),
+(1040, 'Rodrigo', 'Méndez', 'Beltrán', 40, '4550123456', 1, 3, 40, '2025-02-24', '2025-07-24', 86),
+(1041, 'Teresa', 'Escobar', 'Castaño', 41, '4661234567', 2, 1, 41, '2025-02-25', '2025-07-25', 78),
+(1042, 'Sebastián', 'Ariza', 'Ospina', 42, '4772345678', 1, 2, 42, '2025-02-26', '2025-07-26', 83),
+(1043, 'Raúl', 'Lozano', 'Salinas', 43, '4883456789', 2, 3, 43, '2025-02-27', '2025-07-27', 80),
+(1044, 'Beatriz', 'Cardona', 'Valencia', 44, '4994567890', 1, 1, 44, '2025-02-28', '2025-07-28', 75),
+(1045, 'Héctor', 'Muñoz', 'Montenegro', 45, '5005678901', 2, 2, 45, '2025-02-29', '2025-07-29', 89),
+(1046, 'Claudia', 'Patiño', 'Castro', 46, '5116789012', 1, 3, 46, '2025-03-01', '2025-08-01', 82),
+(1047, 'Eduardo', 'Gómez', 'Salamanca', 47, '5227890123', 2, 1, 47, '2025-03-02', '2025-08-02', 78),
+(1048, 'Marcela', 'Navarro', 'Jiménez', 48, '5338901234', 1, 2, 48, '2025-03-03', '2025-08-03', 85),
+(1049, 'Joaquín', 'Peña', 'Álvarez', 49, '5449012345', 2, 3, 49, '2025-03-04', '2025-08-04', 80),
+(1050, 'Rosa', 'Maldonado', 'Ortiz', 50, '5550123456', 1, 1, 50, '2025-03-05', '2025-08-05', 83);
 
 
-INSERT INTO Ruta (nombre, descripcion, sgdb_principal, sgdb_alternativo, fecha_creacion, id_tipo_programa, activa) VALUES
-
-('PHP LARAVEL', 'Ruta de desarrollo web', 'MySQL', 'PostgreSQL', '2023-01-01', 1, TRUE),
-('NETCORE', 'Ruta de ciencia de datos', 'PostgreSQL', 'MySQL', '2023-02-01', 2, TRUE),
-('JAVA', 'Ruta de inteligencia artificial', 'MongoDB', 'MySQL', '2023-03-01', 3, TRUE),
-('NODEJS', 'Ruta de ciberseguridad', 'MySQL', 'MongoDB', '2023-04-01', 4, TRUE);
+INSERT INTO Ruta (nombre, descripcion, sgdb_principal, sgdb_alternativo, fecha_creacion, activa) VALUES
+('PHP LARAVEL', 'Ruta de desarrollo web', 'MySQL', 'PostgreSQL', '2023-01-01' , TRUE),
+('NETCORE', 'Ruta de ciencia de datos', 'PostgreSQL', 'MySQL', '2023-02-01', TRUE),
+('JAVA', 'Ruta de inteligencia artificial', 'MongoDB', 'MySQL', '2023-03-01', TRUE),
+('NODEJS', 'Ruta de ciberseguridad', 'MySQL', 'MongoDB', '2023-04-01', TRUE);
 
 INSERT INTO Modulo (nombre, descripcion, duracion_horas, orden, id_tipo_programa) VALUES
-('Introducción a la Programación', 'Introducción a la algoritmia y Python', 60, 1, 3), -- Fullstack
-('Python', 'Bases de la programación con Python', 80, 2, 3), -- Fullstack
-('HTML y CSS', 'Iniciación en páginas web', 100, 3, 1), -- Frontend
-('Scrum', 'Metodología ágil', 120, 4, 6), -- Habilidades Blandas
-('GitHub', 'Gestión de proyectos con Git', 140, 5, 6), -- Habilidades Blandas
-('JavaScript', 'JavaScript Básico', 200, 6, 1), -- Frontend
-('Introducción al Backend', 'Conceptos fundamentales del desarrollo backend', 180, 7, 2), -- Backend
-('MySQL 1', 'Fundamentos de bases de datos relacionales con MySQL', 160, 8, 2), -- Backend
-('MySQL 2', 'Optimización y consultas avanzadas en MySQL', 180, 9, 2), -- Backend
-('PHP', 'Programación web con PHP', 200, 10, 2), -- Backend
-('Laravel', 'Framework PHP para desarrollo web', 220, 11, 2), -- Backend
-('C#', 'Fundamentos de C# y .NET', 180, 12, 2), -- Backend
-('.NET Core', 'Desarrollo web con .NET Core', 200, 13, 2), -- Backend
-('Java', 'Programación en Java desde cero', 180, 14, 2), -- Backend
-('Spring Boot', 'Framework para desarrollo en Java', 220, 15, 2), -- Backend
-('JavaScript Avanzado', 'Patrones y técnicas avanzadas en JavaScript', 200, 16, 1), -- Frontend
-('Node.js', 'Desarrollo backend con Node.js', 240, 17, 2); -- Backend
+('Introducción a la Programación', 'Introducción a la algoritmia y Python', 60, 1, 1),
+('Python', 'Bases de la programación con Python', 80, 2, 1), 
+('HTML y CSS', 'Iniciación en páginas web', 100, 1, 1), 
+('Scrum', 'Metodología ágil', 120, 4, 1),
+('GitHub', 'Gestión de proyectos con Git', 140, 5, 1), 
+('JavaScript', 'JavaScript Básico', 200, 6, 1),
+('Introducción al Backend', 'Conceptos fundamentales del desarrollo backend', 180, 7, 1), 
+('MySQL 1', 'Fundamentos de bases de datos relacionales con MySQL', 160, 8, 1), 
+('MySQL 2', 'Optimización y consultas avanzadas en MySQL', 180, 9, 1), 
+('PHP', 'Programación web con PHP', 200, 10, 1),
+('Laravel', 'Framework PHP para desarrollo web', 220, 11, 1), 
+('C#', 'Fundamentos de C# y .NET', 180, 12, 1), 
+('.NET Core', 'Desarrollo web con .NET Core', 200, 13, 1), 
+('Java', 'Programación en Java desde cero', 180, 14, 1), 
+('Spring Boot', 'Framework para desarrollo en Java', 220, 15, 1), 
+('JavaScript Avanzado', 'Patrones y técnicas avanzadas en JavaScript', 200, 16, 1), 
+('Node.js', 'Desarrollo backend con Node.js', 240, 17, 1); 
 
 INSERT INTO RutaModulo (id_ruta, id_modulo) VALUES
     (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9),
@@ -416,84 +410,19 @@ INSERT INTO Horario (nombre, hora_inicio, hora_fin, duracion_horas) VALUES
 ('Tarde', '14:00:00', '17:00:00', 3),
 ('Noche', '18:00:00', '21:00:00', 3); 
 
-INSERT INTO Trainer (numero_identificacion, nombres, apellidos, especialidad, telefono_contacto, email, id_ubicacion_base) VALUES
-('111111111', 'Carlos', 'Gómez', 'Desarrollo Web', '3401234567', 'carlos.gomez@example.com', 1),
-('222222222', 'Laura', 'Rodríguez', 'Ciencia de Datos', '3413456789', 'laura.rodriguez@example.com', 2),
-('333333333', 'Pedro', 'López', 'Inteligencia Artificial', '3425678901', 'pedro.lopez@example.com', 3),
-('444444444', 'Ana', 'Martínez', 'Ciberseguridad', '3437890123', 'ana.martinez@example.com', 4),
-('555555555', 'Luis', 'Hernández', 'Marketing Digital', '3449012345', 'luis.hernandez@example.com', 1),
-('666666666', 'María', 'Sánchez', 'Diseño Gráfico', '3451234567', 'maria.sanchez@example.com', 3),
-('777777777', 'Juan', 'Pérez', 'Inglés', '3463456789', 'juan.perez@example.com', 2),
-('888888888', 'Sofía', 'Díaz', 'Emprendimiento', '3475678901', 'sofia.diaz@example.com', 1),
-('999999999', 'Diego', 'Torres', 'Liderazgo', '3487890123', 'diego.torres@example.com', 4),
-('100000000', 'Camila', 'Rojas', 'Otro', '3499012345', 'camila.rojas@example.com', 1),
-('110000000', 'Jholver', 'Miguel', 'Arquitectura de Software', '3501234567', 'jholver.miguel@example.com', 3),
-('120000000', 'Juan', 'Mariño', 'Bases de Datos', '3512345678', 'juan.marino@example.com', 2);
-
-INSERT INTO TrainerEspecialidad (id_trainer, id_tipo_programa) VALUES
-    (1, 1), 
-    (1, 2), 
-    (2, 1),
-    (2, 3), 
-    (3, 2), 
-    (3, 4), 
-    (4, 1),
-    (4, 3),
-    (5, 2), 
-    (5, 4); 
-
-
-INSERT INTO AsignacionGrupo (id_camper, id_tipo_programa, id_ubicacion, id_horario, fecha_asignacion, fecha_inicio, fecha_fin_estimada, activa) VALUES
-(1, 1, 1, 1, '2023-01-15', '2023-01-20', '2023-06-20', TRUE),
-(2, 2, 2, 2, '2023-02-20', '2023-02-25', '2023-07-25', TRUE),
-(3, 3, 3, 3, '2023-03-25', '2023-03-30', '2023-08-30', TRUE),
-(4, 4, 4, 4, '2023-04-30', '2023-05-05', '2023-10-05', TRUE),
-(5, 5, 5, 1, '2023-05-10', '2023-05-15', '2023-10-15', TRUE),
-(6, 6, 6, 2, '2023-06-15', '2023-06-20', '2023-11-20', TRUE),
-(7, 7, 7, 3, '2023-07-20', '2023-07-25', '2023-12-25', TRUE),
-(8, 1, 1, 1, '2023-08-10', '2023-08-15', '2024-01-15', TRUE),
-(9, 2, 2, 2, '2023-09-05', '2023-09-10', '2024-02-10', TRUE),
-(10, 3, 3, 3, '2023-10-01', '2023-10-05', '2024-03-05', TRUE),
-(11, 4, 4, 4, '2023-11-10', '2023-11-15', '2024-04-15', TRUE),
-(12, 5, 5, 1, '2023-12-05', '2023-12-10', '2024-05-10', TRUE),
-(13, 6, 6, 2, '2024-01-15', '2024-01-20', '2024-06-20', TRUE),
-(14, 7, 7, 3, '2024-02-10', '2024-02-15', '2024-07-15', TRUE),
-(15, 1, 1, 1, '2024-03-01', '2024-03-05', '2024-08-05', TRUE),
-(16, 2, 2, 2, '2024-04-05', '2024-04-10', '2024-09-10', TRUE),
-(17, 3, 3, 3, '2024-05-10', '2024-05-15', '2024-10-15', TRUE),
-(18, 4, 4, 4, '2024-06-05', '2024-06-10', '2024-11-10', TRUE),
-(19, 5, 5, 1, '2024-07-10', '2024-07-15', '2024-12-15', TRUE),
-(20, 6, 6, 2, '2024-08-01', '2024-08-05', '2025-01-05', TRUE),
-(21, 7, 7, 3, '2024-09-05', '2024-09-10', '2025-02-10', TRUE),
-(22, 1, 1, 1, '2024-10-10', '2024-10-15', '2025-03-15', TRUE),
-(23, 2, 2, 2, '2024-11-05', '2024-11-10', '2025-04-10', TRUE),
-(24, 3, 3, 3, '2024-12-01', '2024-12-05', '2025-05-05', TRUE),
-(25, 4, 4, 4, '2025-01-15', '2025-01-20', '2025-06-20', TRUE),
-(26, 5, 5, 1, '2025-02-05', '2025-02-10', '2025-07-10', TRUE),
-(27, 6, 6, 2, '2025-03-01', '2025-03-05', '2025-08-05', TRUE),
-(28, 7, 7, 3, '2025-04-10', '2025-04-15', '2025-09-15', TRUE),
-(29, 1, 1, 1, '2025-05-05', '2025-05-10', '2025-10-10', TRUE),
-(30, 2, 2, 2, '2025-06-01', '2025-06-05', '2025-11-05', TRUE),
-(31, 3, 3, 3, '2025-07-10', '2025-07-15', '2025-12-15', TRUE),
-(32, 4, 4, 4, '2025-08-05', '2025-08-10', '2026-01-10', TRUE),
-(33, 5, 5, 1, '2025-09-01', '2025-09-05', '2026-02-05', TRUE),
-(34, 6, 6, 2, '2025-10-10', '2025-10-15', '2026-03-15', TRUE),
-(35, 7, 7, 3, '2025-11-05', '2025-11-10', '2026-04-10', TRUE),
-(36, 1, 1, 1, '2025-12-01', '2025-12-05', '2026-05-05', TRUE),
-(37, 2, 2, 2, '2026-01-15', '2026-01-20', '2026-06-20', TRUE),
-(38, 3, 3, 3, '2026-02-10', '2026-02-15', '2026-07-15', TRUE),
-(39, 4, 4, 4, '2026-03-01', '2026-03-05', '2026-08-05', TRUE),
-(40, 5, 5, 1, '2026-04-05', '2026-04-10', '2026-09-10', TRUE),
-(41, 6, 6, 2, '2026-05-10', '2026-05-15', '2026-10-15', TRUE),
-(42, 7, 7, 3, '2026-06-05', '2026-06-10', '2026-11-10', TRUE),
-(43, 1, 1, 1, '2026-07-10', '2026-07-15', '2026-12-15', TRUE),
-(44, 2, 2, 2, '2026-08-01', '2026-08-05', '2027-01-05', TRUE),
-(45, 3, 3, 3, '2026-09-05', '2026-09-10', '2027-02-10', TRUE),
-(46, 4, 4, 4, '2026-10-10', '2026-10-15', '2027-03-15', TRUE),
-(47, 5, 5, 1, '2026-11-05', '2026-11-10', '2027-04-10', TRUE),
-(48, 6, 6, 2, '2026-12-01', '2026-12-05', '2027-05-05', TRUE),
-(49, 7, 7, 3, '2027-01-15', '2027-01-20', '2027-06-20', TRUE),
-(50, 1, 1, 1, '2027-02-05', '2027-02-10', '2027-07-10', TRUE);
+INSERT INTO Trainer (numero_identificacion, nombre, apellido1, apellido2, telefono_contacto, email) VALUES
+('ID1001', 'Jholver', 'Pardo', 'Gómez', '3001112233', 'jholver.pardo@example.com'),
+('ID1002', 'Miguel', 'Ángel', 'Ángel', 'López', '3002223344', 'miguel.angel@example.com'),
+('ID1003', 'Carlos', 'Andrés', 'Andrés', 'Martínez', '3003334455', 'carlos.andres@example.com'),
+('ID1004', 'Juan', 'Hernandez', 'Rodríguez', '3004445566', 'juan.david@example.com'),
+('ID1005', 'Adrián', 'Fernandez', 'Sánchez', '3005556677', 'adrian.fernando@example.com'),
+('ID1006', 'Pedro', 'Morales', 'Díaz', '3006667788', 'pedro.alfonso@example.com'),
+('ID1007', 'Michael', 'Suarez', 'Brown', '3007778899', 'michael.steven@example.com'),
+('ID1008', 'Clara', 'Florez', 'Gutiérrez', '3008889900', 'clara.maria@example.com'),
+('ID1009', 'José',  'Diaz', 'Hernández', '3009990011', 'jose.manuel@example.com'),
+('ID1010', 'Mónica', 'Zambrano', 'Silva', '3010001122', 'monica.patricia@example.com'),
+('ID1011', 'Mayra', 'Peña', 'Alejandra', 'Vargas', '3011112233', 'mayra.alejandra@example.com'),
+('ID1012', 'Laura', 'Caballero', 'Camila', 'Ramírez', '3012223344', 'laura.camila@example.com');
 
 
 INSERT INTO Asistencia (id_camper, id_grupo, fecha, id_estado_asistencia, hora_llegada, minutos_retraso, motivo_falta, evidencia_justificacion, id_trainer, observaciones) VALUES
@@ -530,17 +459,8 @@ INSERT INTO Egresado (id_camper, fecha_egreso, id_ruta, promedio_final, certific
 (14, '2024-07-12', 4, 84.75, TRUE, '2024-07-17', 'CERT-2024-006', 'B2', 'Visualización de datos', 'Dashboard analítico', 3, NULL, NULL, NULL, NULL),
 (15, '2024-08-08', 1, 79.50, FALSE, NULL, NULL, 'B1', 'WebSockets, Real-time', 'Chat empresarial', 2, NULL, NULL, NULL, NULL);
 
-INSERT INTO HistorialAcademico (id_camper, id_tipo_programa, fecha_inicio, fecha_fin, horas_completadas, promedio, porcentaje_asistencia, modulo_alcanzado, id_estado_final, reconocimientos) VALUES
-(1001, 1, '2024-01-15', '2024-06-15', 350, 4.5, 95.00, 'JavaScript Avanzado', 1, 'Mejor desempeño'),
-(1002, 2, '2024-01-16', '2024-06-16', 300, 3.8, 87.00, 'Python Intermedio', 2, NULL),
-(1003, 3, '2024-01-17', '2024-06-17', 320, 4.1, 90.00, 'Django Básico', 1, 'Esfuerzo notable'),
-(1004, 4, '2024-01-18', '2024-06-18', 310, 3.9, 88.00, 'React.js Intermedio', 2, NULL),
-(1005, 5, '2024-01-19', '2024-06-19', 290, 3.7, 85.00, 'SQL y Bases de Datos', 3, NULL),
-(1006, 1, '2024-01-20', '2024-06-20', 350, 4.2, 91.00, 'AWS Fundamentals', 1, 'Mención especial'),
-(1007, 2, '2024-01-21', '2024-06-21', 300, 3.5, 80.00, 'Machine Learning Básico', 2, NULL),
-(1008, 3, '2024-01-22', '2024-06-22', 320, 4.0, 89.00, 'Flutter para Apps', 1, NULL),
-(1009, 4, '2024-01-23', '2024-06-23', 310, 3.8, 85.00, 'Node.js Avanzado', 2, NULL),
-(1010, 5, '2024-01-24', '2024-06-24', 290, 3.6, 83.00, 'DevOps y CI/CD', 3, NULL);
+INSERT INTO HistorialAcademico (id_camper, fecha_inicio, fecha_fin, horas_completadas, promedio, porcentaje_asistencia, modulo_alcanzado, id_estado_final, reconocimientos) VALUES
+
 
 INSERT INTO Rol (nombre, descripcion) VALUES
 ('Analista', 'Encargado de evaluar datos y generar informes'),

@@ -168,9 +168,7 @@ CREATE TABLE Ruta (
     sgdb_principal VARCHAR(20) NOT NULL,
     sgdb_alternativo VARCHAR(20) NOT NULL,
     fecha_creacion DATE NOT NULL,
-    id_tipo_programa INT NOT NULL DEFAULT 1,
     activa BOOLEAN DEFAULT TRUE,
-    FOREIGN KEY (id_tipo_programa) REFERENCES TipoPrograma(id)
 );
 
 CREATE TABLE Modulo (
@@ -184,7 +182,6 @@ CREATE TABLE Modulo (
 );
 
 CREATE TABLE RutaModulo (
-    id INT PRIMARY KEY AUTO_INCREMENT,
     id_ruta INT NOT NULL,
     id_modulo INT NOT NULL,
     FOREIGN KEY (id_ruta) REFERENCES Ruta(id),
@@ -203,40 +200,13 @@ CREATE TABLE Horario (
 CREATE TABLE Trainer (
     id INT PRIMARY KEY AUTO_INCREMENT,
     numero_identificacion VARCHAR(20) UNIQUE NOT NULL,
-    nombres VARCHAR(50) NOT NULL,
-    apellidos VARCHAR(50) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    apellido1 VARCHAR(50) NOT NULL,
+    apellido2 VARCHAR(50) NOT NULL,
     especialidad VARCHAR(100),
     telefono_contacto VARCHAR(20),
     email VARCHAR(100),
-    id_ubicacion_base INT,
-    FOREIGN KEY (id_ubicacion_base) REFERENCES Ubicacion(id)
-);
-
-CREATE TABLE TrainerEspecialidad (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_trainer INT NOT NULL,
-    id_tipo_programa INT NOT NULL,
-    FOREIGN KEY (id_trainer) REFERENCES Trainer(id),
-    FOREIGN KEY (id_tipo_programa) REFERENCES TipoPrograma(id),
-    UNIQUE KEY (id_trainer, id_tipo_programa)
-);
-
-CREATE TABLE AsignacionGrupo (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    id_camper INT NOT NULL,
-    id_tipo_programa INT NOT NULL,
-    id_ubicacion INT NOT NULL,
-    id_horario INT NOT NULL,
-    fecha_asignacion DATE NOT NULL,
-    fecha_inicio DATE NOT NULL,
-    fecha_fin_estimada DATE NOT NULL,
-    activa BOOLEAN DEFAULT TRUE,
-    FOREIGN KEY (id_camper) REFERENCES Camper(id),
-    FOREIGN KEY (id_tipo_programa) REFERENCES TipoPrograma(id),
-    FOREIGN KEY (id_ubicacion) REFERENCES Ubicacion(id),
-    FOREIGN KEY (id_horario) REFERENCES Horario(id),
-    UNIQUE KEY (id_camper, id_tipo_programa, activa)
-);
+)
 
 CREATE TABLE Asistencia (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -283,22 +253,60 @@ CREATE TABLE Egresado (
 CREATE TABLE HistorialAcademico (
     id INT PRIMARY KEY AUTO_INCREMENT,
     id_camper INT NOT NULL,
-    id_tipo_programa INT NOT NULL,
     fecha_inicio DATE NOT NULL,
     fecha_fin DATE NOT NULL,
     horas_completadas INT NOT NULL,
     promedio DECIMAL(5,2) NOT NULL,
     porcentaje_asistencia DECIMAL(5,2) NOT NULL,
-    modulo_alcanzado VARCHAR(100),
+    id_modulo VARCHAR(100),
     id_estado_final INT NOT NULL,
     reconocimientos TEXT,
     FOREIGN KEY (id_camper) REFERENCES Camper(id),
-    FOREIGN KEY (id_tipo_programa) REFERENCES TipoPrograma(id),
-    FOREIGN KEY (id_estado_final) REFERENCES EstadoFinalAcademico(id)
+    FOREIGN KEY (id_estado_final) REFERENCES EstadoFinalAcademico(id),
+    FOREIGN KEY (id_modulo) REFERENCES Modulo(id)
 );
 
 CREATE TABLE Rol (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     descripcion VARCHAR(200)
+);
+
+CREATE TABLE Grupo (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_ruta INT NOT NULL,
+    id_trainer_principal INT NOT NULL,
+    id_ubicacion INT NOT NULL,
+    id_horario INT NOT NULL,
+    nombre_grupo VARCHAR(50) NOT NULL,  
+    fecha_inicio DATE NOT NULL,
+    fecha_fin_estimada DATE NOT NULL,
+    activo BOOLEAN DEFAULT TRUE,
+    max_campers INT DEFAULT 30,
+    FOREIGN KEY (id_ruta) REFERENCES Ruta(id),
+    FOREIGN KEY (id_trainer_principal) REFERENCES Trainer(id),
+    FOREIGN KEY (id_ubicacion) REFERENCES Ubicacion(id),
+    FOREIGN KEY (id_horario) REFERENCES Horario(id)
+);
+CREATE TABLE CamperGrupo (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_camper INT NOT NULL,
+    id_grupo INT NOT NULL,
+    fecha_ingreso DATE NOT NULL DEFAULT CURRENT_DATE,
+    FOREIGN KEY (id_camper) REFERENCES Camper(id),
+    FOREIGN KEY (id_grupo) REFERENCES Grupo(id),
+    UNIQUE KEY (id_camper, id_grupo)  
+);
+CREATE TABLE ProgresoCamper (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_camper_grupo INT NOT NULL,
+    id_modulo INT NOT NULL,
+    id_trainer INT NOT NULL,  
+    fecha_inicio DATE,
+    fecha_fin DATE,
+    nota DECIMAL(3,1),  
+    aprobado BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (id_camper_grupo) REFERENCES CamperGrupo(id),
+    FOREIGN KEY (id_modulo) REFERENCES Modulo(id),
+    FOREIGN KEY (id_trainer) REFERENCES Trainer(id)
 );
